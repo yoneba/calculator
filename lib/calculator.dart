@@ -34,11 +34,11 @@ String normalize(String rawExpression) {
 }
 
 String? extractNumeral(String expression) {
-  return RegExp(r'-?(0|[1-9]\d*)(\.\d+)?').stringMatch(expression);
+  return RegExp(r'^-?(0|[1-9]\d*)(\.\d+)?').stringMatch(expression);
 }
 
 String? extractOperator(String expression) {
-  return RegExp(r'\+|\-|\*|\/').stringMatch(expression);
+  return RegExp(r'^\+|\-|\*|\/').stringMatch(expression);
 }
 
 double evaluate(String rawExpression) {
