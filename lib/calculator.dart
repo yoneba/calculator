@@ -95,5 +95,5 @@ double evaluate(String rawExpression) {
     }
     operation.executeOnStack(numeralStack, symbolStack.removeLast());
   }
-  return numeralStack.first;
+  return numeralStack.single;
 }
